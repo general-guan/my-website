@@ -1,5 +1,6 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
+import Prose from "@/components/Prose.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
@@ -22,5 +23,7 @@ const { Content } = await doc.render();
 ---
 
 <BaseLayout>
-  <Content />
+  <Prose>
+    <Content />
+  </Prose>
 </BaseLayout>

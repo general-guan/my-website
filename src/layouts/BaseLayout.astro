@@ -1,14 +1,16 @@
 ---
 import "../styles/global.css";
+import Header from "./Header.astro";
 import SideBar from "./SideBar.astro";
 ---
 
 <!doctype html>
-<html lang="en" data-theme="">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
   </head>
   <body class="bg-stone-200 dark:bg-gray-600">
+    <Header />
     <SideBar />
     <slot />
   </body>

@@ -3,9 +3,11 @@ import sidebar from "@/config/sidebar.json";
 import SideBarMenu from "./SideBarMenu.astro";
 ---
 
-<ul class="menu bg-base-200 rounded-box w-56">
-  <SideBarMenu
-    items={sidebar["/front-end/"].items}
-    base={"/docs" + sidebar["/front-end/"].base}
-  />
-</ul>
+<div class="fixed">
+  <ul class="menu bg-base-200 rounded-box w-56">
+    <SideBarMenu
+      items={sidebar["/front-end/"].items}
+      base={"/docs" + sidebar["/front-end/"].base}
+    />
+  </ul>
+</div>

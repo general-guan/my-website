@@ -3,7 +3,7 @@ import sidebar from "@/config/sidebar.json";
 import SideBarMenu from "./SideBarMenu.astro";
 ---
 
-<div class="fixed">
+<div class="fixed hidden md:block">
   <ul class="menu bg-base-200 rounded-box w-56">
     <SideBarMenu
       items={sidebar["/front-end/"].items}

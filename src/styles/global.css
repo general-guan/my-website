@@ -12,3 +12,11 @@
   font-weight: var(--shiki-dark-font-weight) !important;
   text-decoration: var(--shiki-dark-text-decoration) !important;
 }
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}

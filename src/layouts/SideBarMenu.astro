@@ -1,0 +1,39 @@
+---
+const { items, base } = Astro.props;
+
+interface MenuItem {
+  text: string;
+  link?: string;
+  collapsed?: boolean;
+  items?: MenuItem[];
+}
+
+interface Props {
+  items: MenuItem[];
+  base?: string;
+}
+---
+
+{
+  items.map((item) => {
+    if (item.link) {
+      return (
+        <li>
+          <a href={base + item.link}>{item.text}</a>
+        </li>
+      );
+    }
+    if (item.items && item.items.length > 0) {
+      return (
+        <li>
+          <details>
+            <summary>{item.text}</summary>
+            <ul>
+              <Astro.self items={item.items} base={base} />
+            </ul>
+          </details>
+        </li>
+      );
+    }
+  })
+}

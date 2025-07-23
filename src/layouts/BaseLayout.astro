@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
 import Header from "./Header.astro";
 import SideBar from "./SideBar.astro";
@@ -8,6 +9,7 @@ import SideBar from "./SideBar.astro";
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <ClientRouter />
   </head>
   <body class="bg-stone-200 dark:bg-gray-600">
     <Header />

@@ -19,10 +19,22 @@ interface Props {
   doc: CollectionEntry<"docs">;
 }
 
-const { Content } = await doc.render();
+const { Content, headings } = await doc.render();
 ---
 
 <BaseLayout>
+  {
+    headings.map((heading) => {
+      return (
+        <a
+          href={`#${heading.slug}`}
+          class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+        >
+          {heading.text}
+        </a>
+      );
+    })
+  }
   <Prose>
     <Content />
   </Prose>
